@@ -2,13 +2,20 @@
   <div>
     <div class="row flex-center q-pa-md">
       <q-card class="my-card" flat>
-        <img src="https://cdn.quasar.dev/img/mountains.jpg" />
-        <q-card-section>
-          <div class="text-h6">Our Changing Planet</div>
-          <div class="text-subtitle2">by John Doe</div>
+        <q-card-section align="center">
+          <div class="login-txt">Login</div>
         </q-card-section>
         <q-card-section>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          <div>Email</div>
+          <div>
+            <q-input rounded outlined v-model="email"></q-input>
+          </div>
+        </q-card-section>
+        <q-card-section>
+          <div>Password</div>
+          <div>
+            <q-input rounded outlined v-model="password"></q-input>
+          </div>
         </q-card-section>
       </q-card>
     </div>
@@ -16,8 +23,15 @@
 </template>
 
 <script>
+import { ref } from "vue";
 export default {
   // name: 'PageName',
+  setup() {
+    return {
+      email: ref(null),
+      password: ref(null),
+    };
+  },
 };
 </script>
 <style scoped>
@@ -26,5 +40,9 @@ export default {
   width: 480px;
   border-radius: 6px;
   background-color: #f5f5f5;
+}
+.login-txt {
+  font-weight: 700;
+  font-size: 23px;
 }
 </style>
