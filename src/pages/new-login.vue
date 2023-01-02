@@ -1,9 +1,9 @@
 <template>
-  <div>Login</div>
+  <div class="my-body">Login</div>
 </template>
 
 <script>
 export default {
   // name: 'PageName',
-}
+};
 </script>
