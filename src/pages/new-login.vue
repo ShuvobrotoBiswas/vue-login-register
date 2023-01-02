@@ -3,18 +3,23 @@
     <div class="row flex-center q-pa-md">
       <q-card class="my-card" flat>
         <q-card-section align="center">
-          <div class="login-txt">Login</div>
+          <div class="login-txt">Log in</div>
         </q-card-section>
         <q-card-section>
           <div>Email</div>
           <div>
-            <q-input outlined v-model="email"></q-input>
+            <q-input class="my-input" dense outlined v-model="email"></q-input>
           </div>
         </q-card-section>
         <q-card-section>
           <div>Password</div>
           <div>
-            <q-input outlined v-model="password"></q-input>
+            <q-input
+              class="my-input"
+              dense
+              outlined
+              v-model="password"
+            ></q-input>
           </div>
         </q-card-section>
         <q-card-section align="center">
@@ -34,6 +39,19 @@
             color="blue-9"
             label="Forgot your password?"
           ></q-btn>
+        </q-card-section>
+        <q-card-section align="center">
+          <div class="row flex-center">
+            <div class="register-txt text-grey">Don't have an account yet?</div>
+            <q-btn
+              label="Sign up"
+              flat
+              color="blue-9"
+              no-caps
+              dense
+              to="/register"
+            ></q-btn>
+          </div>
         </q-card-section>
       </q-card>
     </div>
@@ -55,13 +73,14 @@ export default {
 <style scoped>
 .my-card {
   height: 465px;
-  width: 480px;
+  width: 400px;
   border-radius: 6px;
   background-color: #f5f5f5;
 }
 .login-txt {
   font-weight: 700;
   font-size: 23px;
+  color: #000000;
 }
 .my-submit-btn {
   padding: 8px 10px;
@@ -72,6 +91,13 @@ export default {
   border-radius: 4px;
 }
 .my-forgot-btn {
+  width: 400px;
+}
+.register-txt {
+  font-weight: 500;
+  font-size: 15px;
+}
+.my-input {
   width: 400px;
 }
 </style>
