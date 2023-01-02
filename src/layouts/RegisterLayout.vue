@@ -3,10 +3,11 @@
     <q-header unelevated class="bg-white text-black">
       <q-toolbar>
         <q-toolbar-title> logo </q-toolbar-title>
-        <div class="my-header">Already have an account?</div>
+
+        <div class="my-header">Don't have an account yet?</div>
         <div>
-          <q-btn flat no-caps color="blue" class="my-btn-txt" to="/register"
-            >Sign up</q-btn
+          <q-btn flat no-caps color="blue" class="my-btn-txt" to="/"
+            >Login</q-btn
           >
         </div>
       </q-toolbar>
