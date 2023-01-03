@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="row flex-center q-pa-md">
+    <div class="row flex-center q-pa-md full-width">
       <q-card class="my-card" flat>
         <q-card-section align="center">
           <div class="login-txt">Create an account</div>
         </q-card-section>
-        <q-card-section>
-          <div>First name</div>
+        <q-card-section align="center">
+          <div class="text-left q-ml-md">First name</div>
           <div>
             <q-input
               class="my-input"
@@ -16,8 +16,8 @@
             ></q-input>
           </div>
         </q-card-section>
-        <q-card-section>
-          <div>Last name</div>
+        <q-card-section align="center">
+          <div class="text-left q-ml-md">Last name</div>
           <div>
             <q-input
               class="my-input"
@@ -27,14 +27,14 @@
             ></q-input>
           </div>
         </q-card-section>
-        <q-card-section>
-          <div>Email</div>
+        <q-card-section align="center">
+          <div class="text-left q-ml-md">Email</div>
           <div>
             <q-input class="my-input" dense outlined v-model="email"></q-input>
           </div>
         </q-card-section>
-        <q-card-section>
-          <div>Password</div>
+        <q-card-section align="center">
+          <div class="text-left q-ml-md">Password</div>
           <div>
             <q-input
               class="my-input"
@@ -92,44 +92,91 @@ export default {
 };
 </script>
 <style scoped>
-.my-card {
-  height: 465px;
-  width: 400px;
-  border-radius: 6px;
-  background-color: #f5f5f5;
+/* for Mobile */
+@media only screen and (max-width: 768px) {
+  .my-card {
+    height: 465px;
+    border-radius: 6px;
+    background-color: #f5f5f5;
+  }
+  .login-txt {
+    font-weight: 700;
+    font-size: 23px;
+    color: #000000;
+  }
+  .my-submit-btn {
+    padding: 8px 10px;
+    width: 300px;
+    height: 40px;
+    background: #322df0;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+      0px 0px 12px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+  }
+  .my-forgot-btn {
+    width: 300px;
+  }
+  .register-txt {
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .my-input {
+    width: 300px;
+  }
+  .terms {
+    font-weight: 500;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.64);
+  }
+  .login-div {
+    width: 300px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+  }
 }
-.login-txt {
-  font-weight: 700;
-  font-size: 23px;
-  color: #000000;
-}
-.my-submit-btn {
-  padding: 8px 10px;
-  width: 400px;
-  height: 40px;
-  background: #322df0;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 0px 12px rgba(0, 0, 0, 0.04);
-  border-radius: 4px;
-}
-.my-forgot-btn {
-  width: 400px;
-}
-.register-txt {
-  font-weight: 500;
-  font-size: 15px;
-}
-.my-input {
-  width: 400px;
-}
-.terms {
-  font-weight: 500;
-  font-size: 13px;
-  color: rgba(0, 0, 0, 0.64);
-}
-.login-div {
-  width: 400px;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.04);
-  border-radius: 4px;
+/* for desktop */
+@media only screen and (min-width: 768px) {
+  .my-card {
+    height: 465px;
+    width: 400px;
+    border-radius: 6px;
+    background-color: #f5f5f5;
+  }
+  .login-txt {
+    font-weight: 700;
+    font-size: 23px;
+    color: #000000;
+  }
+  .my-submit-btn {
+    padding: 8px 10px;
+    width: 400px;
+    height: 40px;
+    background: #322df0;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+      0px 0px 12px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+  }
+  .my-forgot-btn {
+    width: 400px;
+  }
+  .register-txt {
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .my-input {
+    width: 400px;
+  }
+  .terms {
+    font-weight: 500;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.64);
+  }
+  .login-div {
+    width: 400px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+  }
 }
 </style>
