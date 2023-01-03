@@ -6,7 +6,7 @@
           <div class="login-txt">Create an account</div>
         </q-card-section>
         <q-card-section align="center">
-          <div class="text-left q-ml-md">First name</div>
+          <div class="text-left my-txt q-ml-md">First name</div>
           <div>
             <q-input
               class="my-input"
@@ -17,7 +17,7 @@
           </div>
         </q-card-section>
         <q-card-section align="center">
-          <div class="text-left q-ml-md">Last name</div>
+          <div class="text-left my-txt q-ml-md">Last name</div>
           <div>
             <q-input
               class="my-input"
@@ -28,13 +28,13 @@
           </div>
         </q-card-section>
         <q-card-section align="center">
-          <div class="text-left q-ml-md">Email</div>
+          <div class="text-left my-txt q-ml-md">Email</div>
           <div>
             <q-input class="my-input" dense outlined v-model="email"></q-input>
           </div>
         </q-card-section>
         <q-card-section align="center">
-          <div class="text-left q-ml-md">Password</div>
+          <div class="text-left my-txt q-ml-md">Password</div>
           <div>
             <q-input
               class="my-input"
@@ -137,6 +137,9 @@ export default {
 }
 /* for desktop */
 @media only screen and (min-width: 768px) {
+  .my-txt {
+    margin-left: 0px;
+  }
   .my-card {
     height: 465px;
     width: 400px;

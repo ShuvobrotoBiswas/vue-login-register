@@ -5,23 +5,56 @@
         <q-card-section align="center">
           <div class="login-txt">Log in</div>
         </q-card-section>
-        <q-card-section align="center">
-          <div class="text-left q-ml-md">Email</div>
-          <div>
-            <q-input class="my-input" dense outlined v-model="email"></q-input>
-          </div>
-        </q-card-section>
-        <q-card-section align="center">
-          <div class="text-left q-ml-md">Password</div>
-          <div>
-            <q-input
-              class="my-input"
-              dense
-              outlined
-              v-model="password"
-            ></q-input>
-          </div>
-        </q-card-section>
+        <!-- desktop -->
+        <div class="my-dex">
+          <q-card-section align="center">
+            <div class="king-txt">Email</div>
+            <div>
+              <q-input
+                class="my-input"
+                dense
+                outlined
+                v-model="email"
+              ></q-input>
+            </div>
+          </q-card-section>
+          <q-card-section align="center">
+            <div class="king-txt">Password</div>
+            <div>
+              <q-input
+                class="my-input"
+                dense
+                outlined
+                v-model="password"
+              ></q-input>
+            </div>
+          </q-card-section>
+        </div>
+        <!-- mobile -->
+        <div class="my-mob">
+          <q-card-section align="center">
+            <div class="text-left my-txt q-ml-md">Email</div>
+            <div>
+              <q-input
+                class="my-input"
+                dense
+                outlined
+                v-model="email"
+              ></q-input>
+            </div>
+          </q-card-section>
+          <q-card-section align="center">
+            <div class="text-left my-txt q-ml-md">Password</div>
+            <div>
+              <q-input
+                class="my-input"
+                dense
+                outlined
+                v-model="password"
+              ></q-input>
+            </div>
+          </q-card-section>
+        </div>
         <q-card-section align="center">
           <q-btn
             unelevated
@@ -73,6 +106,9 @@ export default {
 <style scoped>
 /* for mobile */
 @media only screen and (max-width: 768px) {
+  .my-dex {
+    display: none;
+  }
   .my-card {
     height: 465px;
     width: 300px;
@@ -106,6 +142,12 @@ export default {
 }
 /* for desktop */
 @media only screen and (min-width: 768px) {
+  .my-mob {
+    display: none;
+  }
+  .my-txt {
+    margin-left: 0px;
+  }
   .my-card {
     height: 465px;
     width: 400px;
@@ -135,6 +177,9 @@ export default {
   }
   .my-input {
     max-width: 400px;
+  }
+  .king-txt {
+    text-align: center;
   }
 }
 </style>
