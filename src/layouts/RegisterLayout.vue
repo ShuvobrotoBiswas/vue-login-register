@@ -4,7 +4,7 @@
       <q-toolbar>
         <q-toolbar-title> logo </q-toolbar-title>
 
-        <div class="my-header">Don't have an account yet?</div>
+        <div class="my-header">Already have an account?</div>
         <div>
           <q-btn flat no-caps color="blue" class="my-btn-txt" to="/"
             >Login</q-btn
