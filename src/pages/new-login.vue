@@ -6,29 +6,33 @@
           <div class="login-txt">Log in</div>
         </q-card-section>
         <!-- desktop -->
-        <div class="my-dex">
-          <q-card-section align="center">
-            <div class="king-txt">Email</div>
-            <div>
-              <q-input
-                class="my-input"
-                dense
-                outlined
-                v-model="email"
-              ></q-input>
-            </div>
-          </q-card-section>
-          <q-card-section align="center">
-            <div class="king-txt">Password</div>
-            <div>
-              <q-input
-                class="my-input"
-                dense
-                outlined
-                v-model="password"
-              ></q-input>
-            </div>
-          </q-card-section>
+        <div class="my-dex row flex-center">
+          <div class="row flex-center dex-card">
+            <q-card flat class="full-width bg-transparent">
+              <q-card-section>
+                <div>Email</div>
+                <div>
+                  <q-input
+                    class="my-input"
+                    dense
+                    outlined
+                    v-model="email"
+                  ></q-input>
+                </div>
+              </q-card-section>
+              <q-card-section>
+                <div>Password</div>
+                <div>
+                  <q-input
+                    class="my-input"
+                    dense
+                    outlined
+                    v-model="password"
+                  ></q-input>
+                </div>
+              </q-card-section>
+            </q-card>
+          </div>
         </div>
         <!-- mobile -->
         <div class="my-mob">
@@ -180,6 +184,10 @@ export default {
   }
   .king-txt {
     text-align: center;
+  }
+  .dex-card {
+    width: 420px;
+    border-radius: 6px;
   }
 }
 </style>
